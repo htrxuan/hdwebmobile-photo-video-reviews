@@ -1,0 +1,35 @@
+.comment-form-hdpvr-media {
+    margin-bottom: 1.5em;
+}
+
+.comment-form-hdpvr-media label {
+    display: block;
+    margin-bottom: 0.4em;
+}
+
+.hdpvr-review-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.75em;
+}
+
+.hdpvr-review-photo-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.hdpvr-review-photo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hdpvr-review-video {
+    max-width: 240px;
+    max-height: 160px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
