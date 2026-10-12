@@ -16,8 +16,8 @@ Let customers attach photos and short videos to their WooCommerce product review
 
 HDWebmobile Photo & Video Reviews adds an optional photo/video upload field to WooCommerce's own native product review form. Uploaded media is attached to the review and displayed in the review list on the product page, giving shoppers visual, customer-submitted proof alongside the star rating and written review.
 
-= Why this plugin exists =
-A competing "Customer Reviews for WooCommerce" plugin shipped a standalone AJAX action for uploading review photos that performed **no authentication, capability, or nonce check at all** (CVE-2026-12684), letting any unauthenticated visitor upload arbitrary image/video files straight into the Media Library. This plugin closes that entire vulnerability class by construction rather than patching around it:
+= Security by design =
+A serious class of bug in review-media tools is a standalone AJAX action for uploading review photos that performs **no authentication, capability, or nonce check at all**, letting any unauthenticated visitor upload arbitrary image/video files straight into the Media Library. This plugin closes that entire vulnerability class by construction rather than patching around it:
 
 * There is no standalone "upload media" endpoint of any kind, AJAX or otherwise. A file is only ever processed as a side effect of a genuine WordPress comment submission going through `wp-comments-post.php` -- WordPress's own comment pipeline (spam checks, Akismet if installed, moderation) -- never a bespoke always-open surface.
 * A product-scoped nonce, generated with the review form and verified before any file is touched, is required in addition to that.
