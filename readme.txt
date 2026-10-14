@@ -37,6 +37,9 @@ A serious class of bug in review-media tools is a standalone AJAX action for upl
 * No client-side image compression/resizing -- large photos are stored at their original resolution (subject to the configured size cap)
 * One combined multi-file field for both photos and videos -- there is no separate "photos only" vs "video only" field in the UI
 
+= Enjoying this plugin? =
+If it helps your site, please consider [leaving an honest review on WordPress.org](https://wordpress.org/support/plugin/hdwebmobile-photo-video-reviews/reviews/#new-post) -- it helps other WordPress users find it. Found a problem or have an idea? Please [open a support topic](https://wordpress.org/support/plugin/hdwebmobile-photo-video-reviews/) first so it can be fixed.
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-photo-video-reviews` directory, or install the plugin through the WordPress plugins screen directly.
