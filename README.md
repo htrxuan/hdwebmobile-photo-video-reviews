@@ -8,7 +8,7 @@ A WooCommerce plugin that lets customers attach photos and short videos to their
 
 ## Why this plugin exists
 
-A competing "Customer Reviews for WooCommerce" plugin shipped a standalone AJAX action for uploading review photos that performed **no authentication, capability, or nonce check at all** (CVE-2026-12684), letting any unauthenticated visitor upload arbitrary image/video files straight into the WordPress Media Library.
+The main risk in review-upload plugins is a standalone AJAX upload action with **no authentication, capability, or nonce check at all**, letting any unauthenticated visitor upload arbitrary files straight into the WordPress Media Library.
 
 This plugin closes that entire vulnerability class by construction rather than patching around it:
 

@@ -9,11 +9,10 @@ if (!defined('ABSPATH')) {
 /**
  * Handles review media uploads.
  *
- * Motivated by CVE-2026-12684 (a competing "Customer Reviews for WooCommerce" plugin
- * exposed a standalone AJAX media-upload action for review attachments with no
- * authentication, capability, or nonce check at all, letting any unauthenticated
- * visitor upload arbitrary files into the Media Library). This plugin closes that
- * vulnerability class by construction rather than patching around it:
+ * The risk this guards against: a standalone AJAX media-upload action for review attachments
+ * with no authentication, capability, or nonce check would let any unauthenticated visitor
+ * upload arbitrary files into the Media Library. This plugin closes that vulnerability class
+ * by construction rather than patching around it:
  *
  * - There is no standalone "upload media" endpoint of any kind, AJAX or otherwise.
  *   Files only ever get processed as a side effect of a genuine WordPress comment
